@@ -1,0 +1,63 @@
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+	options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+	inet 127.0.0.1 netmask 0xff000000 
+	inet6 ::1 prefixlen 128 
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1 
+	nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+EHC29: flags=0<> mtu 0
+EHC26: flags=0<> mtu 0
+XHC20: flags=0<> mtu 0
+fw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 4078
+	lladdr 00:3e:e1:ff:fe:51:44:ec 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect <full-duplex>
+	status: inactive
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=10b<RXCSUM,TXCSUM,VLAN_HWTAGGING,AV>
+	ether 40:6c:8f:57:56:bc 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect (none)
+	status: inactive
+en2: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	options=60<TSO4,TSO6>
+	ether d2:00:15:14:4e:c0 
+	media: autoselect <full-duplex>
+	status: inactive
+en1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether 20:c9:d0:c6:27:77 
+	inet6 fe80::8ef:cd14:4676:42c6%en1 prefixlen 64 secured scopeid 0xa 
+	inet 192.168.43.243 netmask 0xffffff00 broadcast 192.168.43.255
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
+	ether 02:c9:d0:c6:27:77 
+	media: autoselect
+	status: inactive
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1484
+	ether e6:a3:56:44:e2:3c 
+	inet6 fe80::e4a3:56ff:fe44:e23c%awdl0 prefixlen 64 scopeid 0xc 
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+	ether d2:00:15:14:4e:c0 
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+		ipfilter disabled flags 0x2
+	member: en2 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 9 priority 0 path cost 0
+	nd6 options=201<PERFORMNUD,DAD>
+	media: <unknown type>
+	status: inactive
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::a66e:c748:81a0:7f44%utun0 prefixlen 64 scopeid 0xe 
+	nd6 options=201<PERFORMNUD,DAD>
+vboxnet0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	ether 0a:00:27:00:00:00 
+	inet 192.168.56.1 netmask 0xffffff00 broadcast 192.168.56.255
